@@ -3,6 +3,9 @@ package tree;
 import java.io.File;
 import java.util.Arrays;
 
+import static com.diogonunes.jcolor.Ansi.colorize;
+import static com.diogonunes.jcolor.Attribute.*;
+
 /**
  * This class print directories and files using tree way.
  */
@@ -22,17 +25,17 @@ public class Tree {
     }
 
     /**
-     * Print tree.
+     * Print quantity of directories and files.
      * @param directory
      */
     public void print(String directory) {
         System.out.println(directory);
         walk(new File(directory), "");
-        System.out.println("\n"
+        System.out.println(colorize("\n"
                 + this.dirCount
                 + " directories, "
                 + this.fileCount
-                + " files");
+                + " files", YELLOW_TEXT()));
     }
 
     /**
@@ -65,16 +68,22 @@ public class Tree {
             register(file);
 
             if (index == fileList.length - 1) {
-                System.out.println(prefix + "└── " + file.getName());
-                if (file.isDirectory()) {
-                    walk(file, prefix + "    ");
-                }
+                createLeaf(prefix, file, "└── ", "    ");
             } else {
-                System.out.println(prefix + "├── " + file.getName());
-                if (file.isDirectory()) {
-                    walk(file, prefix + "│   ");
-                }
+                createLeaf(prefix, file, "├── ", "│   ");
             }
+        }
+    }
+
+    private void createLeaf(String prefix, File file, String s, String s2) {
+        if (file.isDirectory()) {
+            System.out.println(prefix + s
+                    + colorize(file.getName(), BLUE_TEXT()));
+        } else {
+            System.out.println(prefix + s + file.getName());
+        }
+        if (file.isDirectory()) {
+            walk(file, prefix + s2);
         }
     }
 }
