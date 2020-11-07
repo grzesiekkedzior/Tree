@@ -4,16 +4,15 @@ import java.io.File;
 import java.util.Arrays;
 
 import static com.diogonunes.jcolor.Ansi.colorize;
-import static com.diogonunes.jcolor.Attribute.*;
+import static com.diogonunes.jcolor.Attribute.YELLOW_TEXT;
+import static com.diogonunes.jcolor.Attribute.BLUE_TEXT;
 
 /**
  * This class print directories and files using tree way.
  */
 public class Tree {
-    /**Count directories.*/
-    private int dirCount;
 
-    /**Count files.*/
+    private int dirCount;
     private int fileCount;
 
     /**
