@@ -14,8 +14,8 @@ java -jar NameOfGeneratedJar.jar -h
 Print help.
 
 # How to contribute
-###This project is constructed that is very simple to implement new functionality.   
-###You have only to do:
+### This project is constructed that is very simple to implement new functionality.   
+### You have only to do:
 
 * Create new class inside traverse package that names will be like its functionality.
 * Extends this class with the AbstractTree class from root package.
@@ -28,4 +28,4 @@ void printTree(String directory);
  * Add this shortcut to help file inside resource.
  * Add new condition to Main class.
  
- ####Tree use help from [JColor](https://github.com/dialex/JColor) library to colorize some printed strings. You can simply use its too.
+ #### Tree use help from [JColor](https://github.com/dialex/JColor) library to colorize some printed strings. You can simply use its too.
