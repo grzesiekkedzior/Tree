@@ -1,24 +1,24 @@
-package tree;
+package tree.root;
 
 import java.io.File;
 import java.util.Arrays;
 
 import static com.diogonunes.jcolor.Ansi.colorize;
 import static com.diogonunes.jcolor.Attribute.YELLOW_TEXT;
-import static com.diogonunes.jcolor.Attribute.BLUE_TEXT;
 
 /**
- * This class print directories and files using tree way.
+ * This abstract class print directories and files using tree way.
+ * This is the basic skeleton for all inheriting classes.
  */
-public class Tree {
+public abstract class AbstractTree implements Tree {
 
     private int dirCount;
     private int fileCount;
 
     /**
-     * Set default values for instance variables.
+     * Default values for instance variables.
      */
-    public Tree() {
+    public AbstractTree() {
         this.dirCount = 0;
         this.fileCount = 0;
     }
@@ -27,9 +27,7 @@ public class Tree {
      * Print quantity of directories and files.
      * @param directory
      */
-    public void print(String directory) {
-        System.out.println(directory);
-        walk(new File(directory), "");
+    public void printNumbersOfFiles(String directory) {
         System.out.println(colorize("\n"
                 + this.dirCount
                 + " directories, "
@@ -41,7 +39,7 @@ public class Tree {
      * Counting directories and variables.
      * @param file
      */
-    private void register(File file) {
+    public void register(File file) {
         if (file.isDirectory()) {
             this.dirCount += 1;
         } else {
@@ -51,10 +49,12 @@ public class Tree {
 
     /**
      * Walking recursively through by directories tree.
+     * This method should not be change.
      * @param folder
      * @param prefix
      */
-    private void walk(File folder, String prefix) {
+    @Override
+    public final void walk(File folder, String prefix) {
         File file;
         File[] fileList = folder.listFiles();
         Arrays.sort(fileList);
@@ -71,18 +71,6 @@ public class Tree {
             } else {
                 createLeaf(prefix, file, "├── ", "│   ");
             }
-        }
-    }
-
-    private void createLeaf(String prefix, File file, String s, String s2) {
-        if (file.isDirectory()) {
-            System.out.println(prefix + s
-                    + colorize(file.getName(), BLUE_TEXT()));
-        } else {
-            System.out.println(prefix + s + file.getName());
-        }
-        if (file.isDirectory()) {
-            walk(file, prefix + s2);
         }
     }
 }
