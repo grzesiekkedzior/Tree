@@ -4,16 +4,18 @@
 > Lists the contents of directories in a tree-like format.
 
 # How to use
-For example:
+### For example:
+
+This command prints all files and folders begining from /home directory.
 ```sbtshell
 java -jar NameOfGeneratedJar.jar ./home -a
 ```
-This command prints all files and folders begining from /home directory.
+Print help.   
 
 ```sbtshell
 java -jar NameOfGeneratedJar.jar -h
 ```
-Print help.   
+
 ![](tree.gif)
 
 # How to contribute
@@ -28,7 +30,7 @@ void createLeaf(String prefix, File file, String leftLeaf, String rightLeaf);
 void printTree(String directory);
 ```
  * Add new shortcut to Arguments enum class.
- * Add this shortcut to help file inside resource.
+ * Add this shortcut to Help class.
  * Add new condition to Main class.
  
  #### Tree use help from [JColor](https://github.com/dialex/JColor) library to colorize some printed strings. You can simply use its too.
