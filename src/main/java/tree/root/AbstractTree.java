@@ -49,12 +49,11 @@ public abstract class AbstractTree implements Tree {
 
     /**
      * Walking recursively through by directories tree.
-     * This method should not be change.
      * @param folder
      * @param prefix
      */
     @Override
-    public final void walk(File folder, String prefix) {
+    public void walk(File folder, String prefix) {
         File file;
         File[] fileList = folder.listFiles();
         Arrays.sort(fileList);
