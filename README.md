@@ -14,6 +14,7 @@ This command prints all files and folders begining from /home directory.
 java -jar NameOfGeneratedJar.jar -h
 ```
 Print help.
+![](tree.gif)
 
 # How to contribute
 ### This project is constructed that is very simple to implement new functionality.   
