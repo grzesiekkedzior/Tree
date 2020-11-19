@@ -1,7 +1,7 @@
 <img src="tree.ico" align="right" />
 
 # Tree
-Lists the contents of directories in a tree-like format.
+> Lists the contents of directories in a tree-like format.
 
 # How to use
 For example:
