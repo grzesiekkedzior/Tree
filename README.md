@@ -13,7 +13,7 @@ This command prints all files and folders begining from /home directory.
 ```sbtshell
 java -jar NameOfGeneratedJar.jar -h
 ```
-Print help.
+Print help.   
 ![](tree.gif)
 
 # How to contribute
