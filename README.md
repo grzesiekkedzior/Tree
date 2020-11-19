@@ -1,3 +1,5 @@
+<img src="tree.png" align="right" />
+
 # Tree
 Lists the contents of directories in a tree-like format.
 
