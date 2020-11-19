@@ -1,4 +1,4 @@
-<img src="tree.png" align="right" />
+<img src="tree.ico" align="right" />
 
 # Tree
 Lists the contents of directories in a tree-like format.
