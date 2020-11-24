@@ -6,6 +6,7 @@ package tree.help;
 public enum Arguments {
     ALL_FILES("-a"),
     DIRECTORIES("-d"),
+    SIZE("-ds"),
     HELP("-h");
 
     private final String args;
