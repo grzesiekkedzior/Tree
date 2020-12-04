@@ -7,6 +7,7 @@ public enum Arguments {
     ALL_FILES("-a"),
     DIRECTORIES("-d"),
     SIZE("-ds"),
+    FULL_PATH("-f"),
     HELP("-h");
 
     private final String args;

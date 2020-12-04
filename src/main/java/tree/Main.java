@@ -5,6 +5,7 @@ import tree.help.Help;
 import tree.traverse.AllFiles;
 import tree.traverse.Directories;
 import tree.traverse.FileContentSize;
+import tree.traverse.FullPath;
 
 public final class Main {
     private Main() {
@@ -34,6 +35,8 @@ public final class Main {
                 new Directories().printTree(directory);
             } else if (argument.equals(Arguments.SIZE.getArgs())) {
                 new FileContentSize().printTree(directory);
+            } else if (argument.equals(Arguments.FULL_PATH.getArgs())) {
+                new FullPath().printTree(directory);
             } else {
                 message();
             }
@@ -47,6 +50,7 @@ public final class Main {
         // new Directories().printTree(".");
         // new Help("-h").printHelp();
         // new FileContentSize().printTree(".");
+        // new FullPath().printTree(".");
     }
 
     private static void message() {

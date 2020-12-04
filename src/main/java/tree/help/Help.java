@@ -22,9 +22,12 @@ public final class Help {
                     "\t------------------ Listing options -----------------\n\n"
                     + "\t  -a            All files are listed.\n"
                     + "\t  -d            List directories only.\n"
-                    + "\t  -L level      Descend only level directories deep."
+                    + "\t  -L level      Descend only level directories deep.\n"
                     + "\t  -ds           List directories with auto "
-                            + "generate size (Kb, Mb, Gb");
+                    + "generate size (Kb, Mb, Gb)\n"
+                    + "\t  -f            Prints the full path "
+                    + "prefix for each file."
+            );
         }
     }
 }
